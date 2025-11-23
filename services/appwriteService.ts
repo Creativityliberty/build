@@ -1,8 +1,14 @@
 import { Account, Client, Databases, Users } from 'appwrite';
 
 const client = new Client()
-  .setEndpoint((import.meta.env.VITE_APPWRITE_ENDPOINT as string) || 'https://cloud.appwrite.io/v1')
-  .setProject((import.meta.env.VITE_APPWRITE_PROJECT_ID as string) || '');
+  .setEndpoint(
+    (import.meta.env.VITE_APPWRITE_ENDPOINT as string) ||
+      "https://sgp.cloud.appwrite.io/v1"
+  )
+  .setProject(
+    (import.meta.env.VITE_APPWRITE_PROJECT_ID as string) ||
+      "6922677800157746ff9f"
+  );
 
 export const account = new Account(client);
 export const databases = new Databases(client);
