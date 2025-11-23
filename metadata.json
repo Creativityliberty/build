@@ -1,0 +1,5 @@
+{
+  "name": "Numtema AI Builder",
+  "description": "A premium React application for configuring and building AI agents powered by Google Gemini models, featuring a sleek UI and RAG configuration.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,19 @@
+name: Setup Appwrite CLI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Appwrite CLI
+        uses: appwrite/setup-for-appwrite@v1
+      
+      - name: Verify Appwrite CLI
+        run: appwrite --version
