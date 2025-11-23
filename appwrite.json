@@ -1,0 +1,64 @@
+{
+  "projectId": "build",
+  "projectName": "Numtema AI Builder",
+  "databases": [
+    {
+      "name": "main",
+      "id": "main",
+      "collections": [
+        {
+          "name": "agents",
+          "id": "agents",
+          "attributes": [
+            {
+              "key": "name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "config",
+              "type": "json",
+              "required": false
+            },
+            {
+              "key": "createdAt",
+              "type": "datetime",
+              "required": true
+            }
+          ]
+        },
+        {
+          "name": "projects",
+          "id": "projects",
+          "attributes": [
+            {
+              "key": "name",
+              "type": "string",
+              "required": true
+            },
+            {
+              "key": "description",
+              "type": "string",
+              "required": false
+            },
+            {
+              "key": "ownerId",
+              "type": "string",
+              "required": true
+            },
+            {
+              "key": "createdAt",
+              "type": "datetime",
+              "required": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
