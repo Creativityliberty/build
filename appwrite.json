@@ -6,58 +6,262 @@
             "name": "main",
             "id": "main",
             "collections": [
-                {
-                    "name": "agents",
-                    "id": "agents",
-                    "attributes": [
-                        {
-                            "key": "name",
-                            "type": "string",
-                            "required": true
-                        },
-                        {
-                            "key": "description",
-                            "type": "string",
-                            "required": false
-                        },
-                        {
-                            "key": "config",
-                            "type": "json",
-                            "required": false
-                        },
-                        {
-                            "key": "createdAt",
-                            "type": "datetime",
-                            "required": true
-                        }
-                    ]
-                },
-                {
-                    "name": "projects",
-                    "id": "projects",
-                    "attributes": [
-                        {
-                            "key": "name",
-                            "type": "string",
-                            "required": true
-                        },
-                        {
-                            "key": "description",
-                            "type": "string",
-                            "required": false
-                        },
-                        {
-                            "key": "ownerId",
-                            "type": "string",
-                            "required": true
-                        },
-                        {
-                            "key": "createdAt",
-                            "type": "datetime",
-                            "required": true
-                        }
-                    ]
-                }
+              {
+                "name": "projects",
+                "id": "projects",
+                "attributes": [
+                  {
+                    "key": "name",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "description",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "icon",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "ownerId",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "createdAt",
+                    "type": "datetime",
+                    "required": true
+                  },
+                  {
+                    "key": "updatedAt",
+                    "type": "datetime",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "name": "teams",
+                "id": "teams",
+                "attributes": [
+                  {
+                    "key": "projectId",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "name",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "description",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "process",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "managerAgentId",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "config",
+                    "type": "json",
+                    "required": false
+                  },
+                  {
+                    "key": "createdAt",
+                    "type": "datetime",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "name": "agents",
+                "id": "agents",
+                "attributes": [
+                  {
+                    "key": "teamId",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "name",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "slug",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "description",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "role",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "goal",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "status",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "config",
+                    "type": "json",
+                    "required": false
+                  },
+                  {
+                    "key": "createdAt",
+                    "type": "datetime",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "name": "tasks",
+                "id": "tasks",
+                "attributes": [
+                  {
+                    "key": "teamId",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "name",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "slug",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "description",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "expectedOutput",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "agentId",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "config",
+                    "type": "json",
+                    "required": false
+                  },
+                  {
+                    "key": "createdAt",
+                    "type": "datetime",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "name": "tools",
+                "id": "tools",
+                "attributes": [
+                  {
+                    "key": "agentId",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "name",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "slug",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "type",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "description",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "config",
+                    "type": "json",
+                    "required": false
+                  },
+                  {
+                    "key": "createdAt",
+                    "type": "datetime",
+                    "required": true
+                  }
+                ]
+              },
+              {
+                "name": "knowledge_sources",
+                "id": "knowledge_sources",
+                "attributes": [
+                  {
+                    "key": "agentId",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "title",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "type",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "status",
+                    "type": "string",
+                    "required": true
+                  },
+                  {
+                    "key": "content",
+                    "type": "string",
+                    "required": false
+                  },
+                  {
+                    "key": "config",
+                    "type": "json",
+                    "required": false
+                  },
+                  {
+                    "key": "createdAt",
+                    "type": "datetime",
+                    "required": true
+                  }
+                ]
+              }
             ]
         }
     ]
